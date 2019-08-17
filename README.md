@@ -43,7 +43,7 @@ took a break
 
 ***Option 1***: Install TamperMonkey (Chrome) or GreaseMonkey (Firefox)
 
-**EASY INSTALL click here: https://github.com/genbtc/AutoTrimps/raw/gh-pages/.user.js** (the Monkeys will detect this and prompt you to install it)
+**EASY INSTALL click here: https://github.com/andrew34765/AutoTrimps/raw/gh-pages/.user.js** (the Monkeys will detect this and prompt you to install it)
 
 Overly detailed Chrome/TamperMonkey Instructions:
 - Open the TamperMonkey dashboard and go to utilities – in the URL box paste https://github.com/genbtc/AutoTrimps/raw/gh-pages/.user.js and click IMPORT
@@ -131,7 +131,8 @@ The fact that it works at all is misleading new players into thinking its perfec
 - Buildings cost efficiency + jobs low level fixes
 - Some low level jobs and Buildings fixes.
 - ***12/14***
-- NEW: AutoAllocatePerks (genbtc settings) - uses AutoPerks ratio system to Auto Spend Helium during AutoPortal
+- NEW: AutoAllocatePerks (
+settings) - uses AutoPerks ratio system to Auto Spend Helium during AutoPortal
 - ***12/12***
 - Fix: HeHrBuffer will now portal midzone if you exceed 5x your buffer
 - ***12/10***
