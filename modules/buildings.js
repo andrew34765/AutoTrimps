@@ -1,6 +1,6 @@
 MODULES["buildings"] = {};
 //These can be changed (in the console) if you know what you're doing:
-MODULES["buildings"].nursCostRatio = 0.05; //nursery to warpstation/collector cost ratio. Also for extra gems.
+MODULES["buildings"].nursCostRatio = 1; //nursery to warpstation/collector cost ratio. Also for extra gems.
 MODULES["buildings"].storageMainCutoff = 0.85; //when to buy more storage. (85% )
 MODULES["buildings"].storageLowlvlCutoff1 = 0.7; //when to buy more storage at zone 1
 MODULES["buildings"].storageLowlvlCutoff2 = 0.5; //when to buy more storage from zone 2-10   (more leeway so it doesnt fill up)
