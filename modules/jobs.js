@@ -191,7 +191,7 @@ function buyJobs() {
             checkFireandHire('Trainer');
     }
     //Explorers:
-    if (getPageSetting('MaxExplorers') > game.jobs.Explorer.owned || getPageSetting('MaxExplorers') == -1) {
+    if (getPageSetting('MaxExplorers') > game.jobs.Explorer.owned + 25 || getPageSetting('MaxExplorers') == -1) {
         checkFireandHire('Explorer');
     }
 
