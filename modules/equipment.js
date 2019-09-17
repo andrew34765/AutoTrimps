@@ -1,6 +1,6 @@
 MODULES["equipment"] = {};
 //These can be changed (in the console) if you know what you're doing:
-MODULES["equipment"].numHitsSurvived = 10;   //survive X hits in D stance or not enough Health.
+MODULES["equipment"].numHitsSurvived = 60;   //survive X hits in D stance or not enough Health.
 MODULES["equipment"].numHitsSurvivedScry = 80;
 MODULES["equipment"].enoughDamageCutoff = 4; //above this the game will buy attack equipment
 MODULES["equipment"].capDivisor = 10; //Your Equipment cap divided by this will give you the lower cap for liquified and overkilled zones
