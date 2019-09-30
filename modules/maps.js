@@ -404,7 +404,7 @@ function autoMap() {
               }
               if (theMap.name == 'Dimension of Anger' && document.getElementById("portalBtn").style.display == "none" && !game.talents.portal.purchased) {
                   var theMapDifficulty = Math.ceil(theMap.difficulty / 2);
-                  if(game.global.world < 20 + theMapDifficulty) continue;
+                  if(game.global.world < 18 + theMapDifficulty) continue;
                   selectedMap = theMap.id;
                   break;
               }
