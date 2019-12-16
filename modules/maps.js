@@ -23,7 +23,7 @@ MODULES["maps"].wantHealthMapBonus = 10;//cap how many maps are run during Want 
 MODULES["maps"].SpireFarm199Maps = true;   //this will farm spire on 199 maps instead of 200 maps when Map Reducer is bought
 MODULES["maps"].watchChallengeMaps = [15, 25, 35, 50];  //during 'watch' challenge, run maps on these levels:
 MODULES["maps"].shouldFarmCell = 59;
-MODULES["maps"].SkipNumUnboughtPrestiges = 2;   //exceeding this number of unbought prestiges will trigger a skip of prestige mode.
+MODULES["maps"].SkipNumUnboughtPrestiges = 1;   //exceeding this number of unbought prestiges will trigger a skip of prestige mode.
 MODULES["maps"].UnearnedPrestigesRequired = 2;
 MODULES["maps"].maxMapBonusAfterZ = MODULES["maps"].maxMapBonus;   //Max Map Bonus After Zone uses this many stacks
                                                                  //- init as default value (10). user can set if they want.
