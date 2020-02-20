@@ -220,7 +220,7 @@ function autoStance() {
                 //else if we can totally block all crit damage in X mode, OR we can't survive-crit in D, but we can in X, switch to X.
                 // NOTE: during next loop, the If-block above may immediately decide it wants to switch to B.
             else if (xVoidCritDamage == 0 || ((game.global.formation == 2 || game.global.formation == 4) && voidCritinXok)){
-                setFormation("0");
+                setFormation(2);
             }
                 //otherwise, stuff:
             else {
@@ -238,13 +238,13 @@ function autoStance() {
             if ((game.global.challengeActive == 'Lead') && (xHealth - missingHealth < xDamage + (xHealth * leadDamage)))
                 setFormation(2);
             else
-                setFormation("0");
+                setFormation(2);
         } else if (game.upgrades.Barrier.done && ((newSquadRdy && bHealth > bDamage) || bHealth - missingHealth > bDamage)) {
             setFormation(2);    //does this ever run?
         } else if (game.upgrades.Formations.done) {
             setFormation(2);
         } else
-            setFormation("0");
+            setFormation(2);
     }
     baseDamage /= (game.global.titimpLeft > 0 ? 2 : 1); //unconsider titimp :P
 }
@@ -409,7 +409,7 @@ function autoStance2() {
             //else if we can totally block all crit damage in X mode, OR we can't survive-crit in D, but we can in X, switch to X.
             // NOTE: during next loop, the If-block above may immediately decide it wants to switch to B.
             else if (xDamage == 0 || ((game.global.formation == 2 || game.global.formation == 4) && voidCritinXok)){
-                setFormation("0");
+                setFormation(2);
             }
             //otherwise, stuff: (Try for B again)
             else {
@@ -430,7 +430,7 @@ function autoStance2() {
             if ((game.global.challengeActive == 'Lead') && (xHealth - missingHealth < xDamage + (xHealth * leadDamage)))
                 setFormation(2);
             else
-                setFormation("0");
+                setFormation(2);
         } else if (game.upgrades.Barrier.done && surviveB) {
             if (game.global.formation != 3) {
                 setFormation(2);    //does this ever run?
@@ -568,7 +568,7 @@ function autoStance3() {
                 setFormation(2);
             }
             else if (getPageSetting('WindStacking')) {
-                setFormation(4);
+                setFormation(2);
             }
     }
 }
