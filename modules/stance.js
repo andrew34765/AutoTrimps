@@ -20,7 +20,7 @@ function calcBaseDamageinX() {
     //baseBlock
     baseBlock = game.global.soldierCurrentBlock;
     //baseHealth
-    baseHealth = game.global.soldierHealthMax;
+    baseHealth = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
 
     //if (game.global.soldierHealth <= 0) return; //dont calculate stances when dead, cause the "current" numbers are not updated when dead.
 
