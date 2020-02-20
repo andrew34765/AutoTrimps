@@ -67,7 +67,7 @@ function autoStance() {
 
     //start analyzing autostance
     var missingHealth = game.global.soldierHealthMax - game.global.soldierHealth;
-    var newSquadRdy = game.resources.trimps.realMax() <= game.resources.trimps.owned + 1;
+    var newSquadRdy = game.resources.trimps.realMax() <= 0;
     var dHealth = baseHealth/2;
     var xHealth = baseHealth;
     var bHealth = baseHealth/2;
