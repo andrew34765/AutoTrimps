@@ -215,36 +215,36 @@ function autoStance() {
             //if we are already in X and the NEXT potential crit would take us past the point of being able to return to D/B, switch to B.
             if (game.global.formation == "0" && game.global.soldierHealth - xVoidCritDamage < game.global.soldierHealthMax/2){
                 if (game.upgrades.Barrier.done && (newSquadRdy || (missingHealth < game.global.soldierHealthMax/2)) )
-                    setFormation(2);
+                    setFormation(3);
             }
                 //else if we can totally block all crit damage in X mode, OR we can't survive-crit in D, but we can in X, switch to X.
                 // NOTE: during next loop, the If-block above may immediately decide it wants to switch to B.
             else if (xVoidCritDamage == 0 || ((game.global.formation == 2 || game.global.formation == 4) && voidCritinXok)){
-                setFormation(2);
+                setFormation("0");
             }
                 //otherwise, stuff:
             else {
                 if (game.global.formation == "0"){
                     if (game.upgrades.Barrier.done && (newSquadRdy || (missingHealth < game.global.soldierHealthMax/2)) )
-                        setFormation(2);
+                        setFormation(3);
                     else
-                        setFormation(2);
+                        setFormation(1);
                 }
                 else if (game.upgrades.Barrier.done && (game.global.formation == 2 || game.global.formation == 4))
-                    setFormation(2);
+                    setFormation(3);
             }
         } else if (game.upgrades.Formations.done && ((newSquadRdy && xHealth > xDamage) || xHealth - missingHealth > xDamage)) {
             //in lead challenge, switch to H if about to die, so doesn't just die in X mode without trying
             if ((game.global.challengeActive == 'Lead') && (xHealth - missingHealth < xDamage + (xHealth * leadDamage)))
-                setFormation(2);
+                setFormation(1);
             else
-                setFormation(2);
+                setFormation("0");
         } else if (game.upgrades.Barrier.done && ((newSquadRdy && bHealth > bDamage) || bHealth - missingHealth > bDamage)) {
-            setFormation(2);    //does this ever run?
+            setFormation(3);    //does this ever run?
         } else if (game.upgrades.Formations.done) {
-            setFormation(2);
+            setFormation(1);
         } else
-            setFormation(2);
+            setFormation("0");
     }
     baseDamage /= (game.global.titimpLeft > 0 ? 2 : 1); //unconsider titimp :P
 }
@@ -404,42 +404,42 @@ function autoStance2() {
             //if we are already in X and the NEXT potential crit would take us past the point of being able to return to D/B, switch to B.
             if (game.global.formation == "0" && game.global.soldierHealth - xDamage < bHealth){
                 if (game.upgrades.Barrier.done && (newSquadRdy || missingHealth < bHealth))
-                    setFormation(2);
+                    setFormation(3);
             }
             //else if we can totally block all crit damage in X mode, OR we can't survive-crit in D, but we can in X, switch to X.
             // NOTE: during next loop, the If-block above may immediately decide it wants to switch to B.
             else if (xDamage == 0 || ((game.global.formation == 2 || game.global.formation == 4) && voidCritinXok)){
-                setFormation(2);
+                setFormation("0");
             }
             //otherwise, stuff: (Try for B again)
             else {
                 if (game.global.formation == "0"){
                     if (game.upgrades.Barrier.done && (newSquadRdy || missingHealth < bHealth))
-                        setFormation(2);
+                        setFormation(3);
                     else
-                        setFormation(2);
+                        setFormation(1);
                 }
                 else if (game.upgrades.Barrier.done && (game.global.formation == 2 || game.global.formation == 4))
-                    setFormation(2);
+                    setFormation(3);
             }
         } else if (game.upgrades.Formations.done && !xExplosionOK) {
             // Set to H if killing badguys will cause your trimps to die
-            setFormation(2);
+            setFormation(1);
         } else if (game.upgrades.Formations.done && surviveX) {
             //in lead challenge, switch to H if about to die, so doesn't just die in X mode without trying
             if ((game.global.challengeActive == 'Lead') && (xHealth - missingHealth < xDamage + (xHealth * leadDamage)))
-                setFormation(2);
+                setFormation(1);
             else
-                setFormation(2);
+                setFormation("0");
         } else if (game.upgrades.Barrier.done && surviveB) {
             if (game.global.formation != 3) {
-                setFormation(2);    //does this ever run?
+                setFormation(3);    //does this ever run?
                 //TODO Check this with analytics instead.
                 debug("AutoStance B/3","other");
             }
         } else {
             if (game.global.formation != 1)
-                setFormation(2);    //the last thing that runs
+                setFormation(1);    //the last thing that runs
         }
     }
     baseDamage /= (game.global.titimpLeft > 0 ? 2 : 1); //unconsider titimp
@@ -568,7 +568,7 @@ function autoStance3() {
                 setFormation(2);
             }
             else if (getPageSetting('WindStacking')) {
-                setFormation(2);
+                setFormation(4);
             }
     }
 }
