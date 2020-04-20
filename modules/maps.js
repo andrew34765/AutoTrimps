@@ -81,7 +81,7 @@ function autoMap() {
     var voidMapLevelSettingZone = (voidMapLevelSetting+"").split(".")[0];
     var voidMapLevelSettingMap = (voidMapLevelSetting+"").split(".")[1];
     if (voidMapLevelSettingMap === undefined || (game.global.challengeActive == 'Lead' && !challSQ))
-        voidMapLevelSettingMap = 93;
+        voidMapLevelSettingMap = 98;
     if (voidMapLevelSettingMap.length == 1) voidMapLevelSettingMap += "0";  //entering 187.70 becomes 187.7, this will bring it back to 187.70
     var voidsuntil = getPageSetting('RunNewVoidsUntil');
     needToVoid = voidMapLevelSetting > 0 && game.global.totalVoidMaps > 0 && game.global.lastClearedCell + 1 >= voidMapLevelSettingMap &&
@@ -299,7 +299,7 @@ function autoMap() {
     }
 
     //stack tox stacks if we are doing max tox, or if we need to clear our void maps
-    if(game.global.challengeActive == 'Toxicity' && game.global.lastClearedCell > 93 && game.challenges.Toxicity.stacks < 1500 && ((getPageSetting('MaxTox') && game.global.world > 20) || needToVoid)) {
+    if(game.global.challengeActive == 'Toxicity' && game.global.lastClearedCell > 98 && game.challenges.Toxicity.stacks < 1500 && ((getPageSetting('MaxTox') && game.global.world > 20) || needToVoid)) {
         shouldDoMaps = true;
         //we will get at least 85 toxstacks from the 1st voidmap (unless we have overkill)
 //            if (!game.portal.Overkill.locked && game.stats.cellsOverkilled.value)
@@ -631,8 +631,8 @@ function autoMap() {
                 &&
                     (
                     (game.resources.trimps.realMax() <= game.resources.trimps.owned + 1)
-                    || ((game.global.challengeActive == 'Lead' && !challSQ) && game.global.lastClearedCell > 93)
-                    || (doVoids && game.global.lastClearedCell > 93)
+                    || ((game.global.challengeActive == 'Lead' && !challSQ) && game.global.lastClearedCell > 98)
+                    || (doVoids && game.global.lastClearedCell > 98)
                     )
                 ){
                 //output stuck message
